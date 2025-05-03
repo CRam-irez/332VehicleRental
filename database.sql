@@ -45,6 +45,6 @@ CREATE TABLE Support_Ticket (
     user_id INT NOT NULL,
     subject VARCHAR(100) NOT NULL,
     message TEXT NOT NULL,
-    status EMUM('open', 'in_progress', 'closed') DEFAULT 'open',
+    status ENUM('open', 'in_progress', 'closed') DEFAULT 'open',
     FOREIGN KEY (user_id) REFERENCES User(user_id) ON DELETE CASCADE
 );
