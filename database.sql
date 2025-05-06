@@ -1,5 +1,5 @@
 -- @block
-CREATE TABLE User (
+CREATE TABLE Users (
     user_id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE,
@@ -25,7 +25,7 @@ CREATE TABLE Booking (
     start_date DATE NOT NULL,
     end_date DATE NOT NULL,
     total_cost DECIMAL(10,2) NOT NULL,
-    FOREIGN KEY (user_id) REFERENCES User(user_id) ON DELETE CASCADE,
+    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE,
     FOREIGN KEY (vehicle_id) REFERENCES Vehicle(vehicle_id) ON DELETE CASCADE
 );
 
@@ -46,5 +46,5 @@ CREATE TABLE Support_Ticket (
     subject VARCHAR(100) NOT NULL,
     message TEXT NOT NULL,
     status ENUM('open', 'in_progress', 'closed') DEFAULT 'open',
-    FOREIGN KEY (user_id) REFERENCES User(user_id) ON DELETE CASCADE
+    FOREIGN KEY (user_id) REFERENCES Users(user_id) ON DELETE CASCADE
 );
