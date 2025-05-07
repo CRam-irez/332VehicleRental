@@ -1,17 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>User Login</title>
 </head>
 <body>
-    <nav class = "navbar">
-        <div class = "navdiv">
-            <li><a href = "index.html">Home</a></li>
-            <li><a href = "vehicles.html">Vehicles</a></li>
-            <li><a href = "login.html">Sign Up</a></li>
-        </div>
-    </nav>
+    <h2>Login</h2>
+    <form action="login.php" method="POST">
+        Email: <input type="email" name="email" required><br>
+        Password: <input type="password" name="password" required><br>
+        <input type="submit" value="Login">
+    </form>
 </body>
 </html>
