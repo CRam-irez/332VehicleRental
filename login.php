@@ -30,8 +30,8 @@ if ($result->num_rows === 1) {
 
         echo "Login successful! Welcome, " . htmlspecialchars($user['name']) . ".";
         // You can also redirect:
-        // header("Location: dashboard.php");
-        // exit();
+        header("Location: dashboard.php");
+        exit();
     } else {
         echo "Incorrect password.";
     }
