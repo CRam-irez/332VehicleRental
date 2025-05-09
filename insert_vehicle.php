@@ -38,6 +38,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 </head>
 <body>
     <h2>Add a New Vehicle</h2>
+    <a href="admin_dashboard.php">Back to Dashboard</a><br><br>
+
     <form method="POST" action="">
         Brand: <input type="text" name="brand" required><br><br>
         Model: <input type="text" name="model" required><br><br>
