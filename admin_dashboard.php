@@ -18,7 +18,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
     </style>
 </head>
 <body>
-    <h1>Welcome, Admin <?php echo htmlspecialchars($_SESSION['name']); ?>!</h1>
+    <h1>Welcome, <?php echo htmlspecialchars($_SESSION['name']); ?>!</h1>
     <a href="logout.php">Log Out</a>
 
     <div class="admin-section">
@@ -26,7 +26,7 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
         <ul>
             <li><a href="insert_vehicle.php">Add New Vehicle</a></li>
             <li><a href="manage_vehicles.php">Edit/Delete Vehicles</a></li>
-            <li><a href="view_users.php">View Users</a></li>
+            <li><a href="view_bookings.php">View Bookings</a></li>
         </ul>
     </div>
 </body>
